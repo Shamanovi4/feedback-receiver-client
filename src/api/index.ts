@@ -5,7 +5,7 @@ export class FeedbackApi {
   static async createFeedback(
     feedback: Partial<IFeedback>
   ): Promise<IFeedbackState[]> {
-    const res = await axios.post('http://localhost:3000/feedbacks', feedback)
+    const res = await axios.post(`${process.env.REACT_APP_URL}`, feedback)
     return res.data
   }
 }
