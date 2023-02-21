@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "ApercuArabicPro";
+  src: url("../../assets/fonts/ApercuArabicPro-Regular.ttf") format("truetype");
+}
+
+.feedback {
+  position: relative;
+
+  &Wrapper {
+    position: sticky;
+    max-width: 557px;
+    margin: 179px 30px 174px 150px;
+    z-index: 1000;
+  }
+
+  &Form {
+    font-family: 'ApercuArabicPro';
+    font-weight: 400;
+
+    &Heading {
+      margin-bottom: 30px;
+      font-size: 40px;
+      line-height: 130%;
+      color: #3e3e3e;
+    }
+
+    &Button {
+      margin-top: 23px;
+      padding: 27px 52px 28px;
+      background: #fad34f;
+      border-radius: 37px;
+      font-size: 18px;
+      line-height: 18px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+	.feedback {
+    &Wrapper {
+      margin: 179px 0 174px 60px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+	.feedback {
+    &Wrapper {
+      margin: 179px 0 174px 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+	.feedback {
+    &Wrapper {
+      margin: 179px 30px 174px 30px;
+    }
+  }
+}

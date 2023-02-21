@@ -1,0 +1,44 @@
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  &Wrapper {
+    position: absolute;
+    width: 976px;
+    height: 976px;
+    top: -52px;
+    right: -350px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1400px) {
+	.map {
+    &Wrapper {
+      width: 876px;
+      height: 876px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+	.map {
+    &Wrapper {
+      width: 776px;
+      height: 776px;
+      right: -450px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+	.map {
+    display: none;
+  }
+}

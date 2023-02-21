@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "ApercuArabicPro";
+  src: url("../../../assets/fonts/ApercuArabicPro-Regular.ttf") format("truetype");
+}
+
+.inputWrapper {
+	position: relative;
+	width: 100%;
+  margin-bottom: 8px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 9px;
+		left: 50%;
+		z-index: 1;
+		width: 0;
+		height: 2px;
+		background: transparent;
+		transition: .5s all ease-in-out;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 9px;
+		right: 50%;
+		z-index: 1;
+		width: 0;
+		height: 2px;
+		background: transparent;
+		transition: .5s all ease-in-out;
+	}
+
+	&:focus-within::before, &:focus-within::after {
+		width: 48%;
+		background: #fad34f;
+	}
+
+	&.notValid {
+		&::before, &::after {
+			width: 48%;
+			background: #f472b7;
+		}
+	}
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 93px;
+	padding: 31px 46px 30px;
+	background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+	font-size: 16px;
+	font-weight: 300;
+	color: #2d2d2d;
+  font-family: 'ApercuArabicPro';
+
+	&::placeholder {
+		color: #2d2d2d;
+	}
+
+	&:-webkit-autofill {
+		animation-name: autofill;
+		transition: all 36000s ease-in-out 0s;
+	}
+}
+
+@media (max-width: 768px) {
+  .input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 414px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
+
+@keyframes autofill {}
